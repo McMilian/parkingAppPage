@@ -1,29 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — [App Name]</title>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 40px 20px 80px;
-    line-height: 1.6;
-    color: #1a1a1a;
-    background: #ffffff;
-  }
-  h1 { font-size: 1.8em; margin-bottom: 0.2em; }
-  h2 { font-size: 1.25em; margin-top: 1.8em; border-bottom: 1px solid #e0e0e0; padding-bottom: 0.3em; }
-  .meta { color: #666; font-size: 0.9em; margin-bottom: 2em; }
-  a { color: #0645ad; }
-  ul { padding-left: 1.3em; }
-  footer { margin-top: 3em; font-size: 0.85em; color: #777; }
-</style>
-</head>
-<body>
-
 <h1>Privacy Policy</h1>
 <p class="meta">App: <strong>[App Name]</strong> &nbsp;|&nbsp; Effective date: <strong>[Month Day, Year]</strong> &nbsp;|&nbsp; Last updated: <strong>[Month Day, Year]</strong></p>
 
