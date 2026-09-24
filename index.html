@@ -3,7 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Parking Spot Share Privacy Policy</title>
+<title>SpotShare Privacy Policy</title>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="256x256" href="icon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>
+  (function () {
+    var lang = null;
+    try { lang = new URLSearchParams(location.search).get("lang"); } catch (e) {}
+    if (lang !== "en" && lang !== "pl") {
+      try { lang = localStorage.getItem("lang"); } catch (e) {}
+    }
+    if (lang !== "en" && lang !== "pl") {
+      lang = /^pl\b/i.test(navigator.language || "") ? "pl" : "en";
+    }
+    document.documentElement.lang = lang;
+  })();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -54,17 +70,55 @@
   }
 
   .masthead .mark {
-    width: 22px;
-    height: 22px;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: block;
+    flex: none;
+  }
+
+  .masthead .spacer { flex: 1; }
+
+  .lang-switch {
+    display: inline-flex;
+    border: 1px solid color-mix(in srgb, var(--accent-ink) 35%, transparent);
     border-radius: 6px;
-    background: color-mix(in srgb, var(--accent-ink) 18%, transparent);
-    display: grid;
-    place-items: center;
+    overflow: hidden;
+  }
+
+  .lang-switch button {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: var(--accent-ink);
     font-family: "IBM Plex Mono", ui-monospace, monospace;
     font-size: 12px;
     font-weight: 500;
-    flex: none;
+    letter-spacing: 0.06em;
+    padding: 5px 10px;
+    cursor: pointer;
+    opacity: 0.75;
   }
+
+  .lang-switch button + button {
+    border-left: 1px solid color-mix(in srgb, var(--accent-ink) 35%, transparent);
+  }
+
+  .lang-switch button:hover { opacity: 1; }
+
+  .lang-switch button[aria-pressed="true"] {
+    background: var(--accent-ink);
+    color: var(--accent);
+    opacity: 1;
+  }
+
+  .lang-switch button:focus-visible {
+    outline: 2px solid var(--accent-ink);
+    outline-offset: 2px;
+  }
+
+  html[lang="en"] [data-lang="pl"],
+  html[lang="pl"] [data-lang="en"] { display: none; }
 
   .masthead .name {
     font-family: "IBM Plex Mono", ui-monospace, monospace;
@@ -215,18 +269,23 @@
 <body>
 
 <div class="masthead">
-  <span class="mark">P</span>
-  <span class="name">Parking Spot Share</span>
+  <img class="mark" src="icon.png" alt="" width="36" height="36">
+  <span class="name">SpotShare</span>
+  <span class="spacer"></span>
+  <div class="lang-switch" role="group" aria-label="Language / Język">
+    <button type="button" data-set-lang="en" lang="en">EN</button>
+    <button type="button" data-set-lang="pl" lang="pl">PL</button>
+  </div>
 </div>
 
-<main>
+<main data-lang="en" lang="en">
   <h1>Privacy Policy</h1>
   <div class="meta">
     <span>Effective date: <strong>September 6, 2026</strong></span>
-    <span>Last updated: <strong>September 6, 2026</strong></span>
+    <span>Last updated: <strong>September 24, 2026</strong></span>
   </div>
 
-  <p class="lede">This Privacy Policy describes how Parking Spot Share ("the App", "we", "us") handles information when you use our application. Parking Spot Share helps residents of a community or building share and request parking spots with one another, so it necessarily collects some information tied to your account and activity — this policy explains exactly what, and why.</p>
+  <p class="lede">This Privacy Policy describes how SpotShare ("the App", "we", "us") handles information when you use our application. SpotShare helps residents of a community or building share and request parking spots with one another, so it necessarily collects some information tied to your account and activity — this policy explains exactly what, and why.</p>
 
   <section>
     <h2>Information We Collect</h2>
@@ -270,13 +329,23 @@
   </section>
 
   <section>
+    <h2>Account Deletion</h2>
+    <p>You can delete your account at any time directly in the App, from your account settings. Deleting your account permanently removes your account information and the parking activity data associated with it, including your registered parking spaces, offers, requests, and push notification tokens.</p>
+    <div class="callout">
+      <span class="label">Deletion is permanent</span>
+      <p>Once your account is deleted it cannot be restored. If you want to use the App again later, you will need to register a new account.</p>
+    </div>
+    <p>If you cannot access the App, you can also request deletion by contacting us using the details below.</p>
+  </section>
+
+  <section>
     <h2>Data Retention</h2>
-    <p>We retain your account and parking activity data for as long as your account remains active, so the App can continue functioning for you and the residents you interact with. If you'd like your account and associated data deleted, contact us using the details below.</p>
+    <p>We retain your account and parking activity data for as long as your account remains active, so the App can continue functioning for you and the residents you interact with. When you delete your account, this data is removed as described under "Account Deletion" above. Standard technical logs kept by our hosting provider are retained only for the limited period needed for security and operational purposes.</p>
   </section>
 
   <section>
     <h2>Your Rights</h2>
-    <p>Depending on where you live, you may have rights to access, correct, or request deletion of information associated with you. To make such a request, contact us using the details below.</p>
+    <p>Depending on where you live, you may have rights to access, correct, or delete information associated with you. You can delete your account and data yourself in the App at any time; for any other request, contact us using the details below.</p>
   </section>
 
   <section>
@@ -300,8 +369,127 @@
     <a href="mailto:parkingspotshareapp@gmail.com">parkingspotshareapp@gmail.com</a></p>
   </section>
 
-  <footer>&copy; 2026 Parking Spot Share. All rights reserved.</footer>
+  <footer>&copy; 2026 SpotShare. All rights reserved.</footer>
 </main>
+
+<main data-lang="pl" lang="pl">
+  <h1>Polityka prywatności</h1>
+  <div class="meta">
+    <span>Data wejścia w życie: <strong>6 września 2026</strong></span>
+    <span>Ostatnia aktualizacja: <strong>24 września 2026</strong></span>
+  </div>
+
+  <p class="lede">Niniejsza Polityka prywatności opisuje, w jaki sposób SpotShare („Aplikacja”, „my”) przetwarza informacje podczas korzystania z naszej aplikacji. SpotShare pomaga mieszkańcom osiedla lub budynku udostępniać sobie nawzajem miejsca parkingowe i prosić o nie, dlatego z konieczności zbiera pewne informacje związane z Twoim kontem i aktywnością — ta polityka wyjaśnia dokładnie, jakie i w jakim celu.</p>
+
+  <section>
+    <h2>Jakie informacje zbieramy</h2>
+    <p>Aby zapewnić podstawowe funkcje Aplikacji, zbieramy:</p>
+    <ul>
+      <li><strong>Dane konta:</strong> Twój adres e-mail, nazwę wyświetlaną, numer lokalu oraz społeczność, do której dołączasz — zbierane podczas rejestracji.</li>
+      <li><strong>Uwierzytelnianie:</strong> logowanie obsługuje Microsoft Entra External ID. Nigdy nie widzimy ani nie przechowujemy Twojego hasła — otrzymujemy jedynie token potwierdzający Twoją tożsamość.</li>
+      <li><strong>Dane o aktywności parkingowej:</strong> zarejestrowane przez Ciebie miejsca parkingowe, publikowane oferty udostępnienia miejsca, prośby o miejsce oraz dokonane lub otrzymane rezerwacje, w tym opcjonalne notatki lub cena, jeśli zdecydujesz się je dodać.</li>
+      <li><strong>Dane powiadomień push:</strong> token push urządzenia, platforma (iOS/Android) oraz preferowany język — używane wyłącznie do dostarczania powiadomień z Aplikacji (np. gdy ktoś poprosi o miejsce lub zarezerwuje oferowane przez Ciebie miejsce).</li>
+      <li><strong>Standardowe dane techniczne:</strong> informacje takie jak adres IP, które serwery naszego dostawcy hostingu rejestrują w sposób naturalny ze względów bezpieczeństwa i operacyjnych.</li>
+    </ul>
+    <p><strong>Nie</strong> zbieramy Twojej dokładnej lokalizacji, kontaktów ani żadnych identyfikatorów reklamowych, a Aplikacja nie korzysta z zewnętrznych narzędzi analitycznych ani reklamowych.</p>
+
+    <div class="callout">
+      <span class="label">Widoczne dla sąsiadów</span>
+      <p>Ponieważ Aplikacja służy mieszkańcom do wspólnego organizowania parkowania, Twoja <strong>nazwa wyświetlana i numer lokalu są widoczne dla innych mieszkańców</strong> Twojej społeczności, gdy ma to znaczenie — na przykład przy ofercie, prośbie lub rezerwacji miejsca, w której uczestniczysz. Jest to podstawowy element działania Aplikacji, a nie przypadkowe udostępnianie danych.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Jak wykorzystujemy informacje</h2>
+    <p>Opisane powyżej informacje wykorzystujemy wyłącznie w celu:</p>
+    <ul>
+      <li>Zapewnienia podstawowych funkcji Aplikacji — łączenia mieszkańców z dostępnymi ofertami i prośbami o miejsca parkingowe oraz zarządzania rezerwacjami</li>
+      <li>Uwierzytelniania Cię i zapewnienia bezpieczeństwa Twojego konta</li>
+      <li>Wysyłania powiadomień push o istotnej aktywności w Twojej społeczności</li>
+      <li>Diagnozowania i rozwiązywania problemów technicznych oraz utrzymania bezpieczeństwa i niezawodności Aplikacji</li>
+    </ul>
+    <p>Nie wykorzystujemy tych informacji do celów reklamowych i nie sprzedajemy ani nie wynajmujemy żadnych informacji podmiotom trzecim.</p>
+  </section>
+
+  <section>
+    <h2>Udostępnianie danych</h2>
+    <p>Udostępniamy informacje wyłącznie w następujących przypadkach:</p>
+    <ul>
+      <li><strong>Innym mieszkańcom Twojej społeczności</strong>, jak opisano powyżej (Twoja nazwa i numer lokalu, gdy dotyczy to oferty, prośby lub rezerwacji miejsca).</li>
+      <li><strong>Dostawcom usług, którzy pomagają nam prowadzić Aplikację</strong> — obecnie Microsoft Azure (hosting i uwierzytelnianie Entra External ID) oraz Expo (dostarczanie powiadomień push) — wyłącznie w celu świadczenia przez nich usług w naszym imieniu.</li>
+      <li><strong>Gdy wymagają tego przepisy prawa.</strong></li>
+    </ul>
+    <p>Nie sprzedajemy Twoich informacji podmiotom trzecim ani nie udostępniamy ich w celach reklamowych.</p>
+  </section>
+
+  <section>
+    <h2>Usunięcie konta</h2>
+    <p>Możesz w każdej chwili usunąć swoje konto bezpośrednio w Aplikacji, w ustawieniach konta. Usunięcie konta trwale usuwa dane konta oraz powiązane z nim dane o aktywności parkingowej, w tym zarejestrowane miejsca parkingowe, oferty, prośby i tokeny powiadomień push.</p>
+    <div class="callout">
+      <span class="label">Usunięcie jest trwałe</span>
+      <p>Usuniętego konta nie można przywrócić. Jeśli zechcesz ponownie korzystać z Aplikacji, konieczne będzie zarejestrowanie nowego konta.</p>
+    </div>
+    <p>Jeśli nie masz dostępu do Aplikacji, możesz również poprosić o usunięcie danych, kontaktując się z nami za pomocą danych podanych poniżej.</p>
+  </section>
+
+  <section>
+    <h2>Przechowywanie danych</h2>
+    <p>Przechowujemy dane Twojego konta i aktywności parkingowej tak długo, jak Twoje konto pozostaje aktywne, aby Aplikacja mogła nadal działać dla Ciebie i mieszkańców, z którymi współpracujesz. Po usunięciu konta dane te są usuwane w sposób opisany powyżej w sekcji „Usunięcie konta”. Standardowe logi techniczne prowadzone przez naszego dostawcę hostingu są przechowywane wyłącznie przez ograniczony czas niezbędny ze względów bezpieczeństwa i operacyjnych.</p>
+  </section>
+
+  <section>
+    <h2>Twoje prawa</h2>
+    <p>W zależności od miejsca zamieszkania możesz mieć prawo do dostępu do dotyczących Cię informacji, ich sprostowania lub usunięcia. Konto i dane możesz w każdej chwili usunąć samodzielnie w Aplikacji; w przypadku innych żądań skontaktuj się z nami za pomocą danych podanych poniżej.</p>
+  </section>
+
+  <section>
+    <h2>Prywatność dzieci</h2>
+    <p>Aplikacja jest przeznaczona dla dorosłych mieszkańców organizujących parkowanie i nie jest skierowana do dzieci.</p>
+  </section>
+
+  <section>
+    <h2>Bezpieczeństwo</h2>
+    <p>Stosujemy uzasadnione środki techniczne i organizacyjne, aby chronić informacje przed nieuprawnionym dostępem, zmianą lub ujawnieniem.</p>
+  </section>
+
+  <section>
+    <h2>Zmiany niniejszej polityki</h2>
+    <p>Możemy od czasu do czasu aktualizować niniejszą Politykę prywatności. Zmiany będą publikowane na tej stronie wraz ze zaktualizowaną datą ostatniej aktualizacji.</p>
+  </section>
+
+  <section>
+    <h2>Kontakt</h2>
+    <p>Jeśli masz pytania dotyczące niniejszej Polityki prywatności lub chcesz poprosić o usunięcie swoich danych, skontaktuj się z nami:<br>
+    <a href="mailto:parkingspotshareapp@gmail.com">parkingspotshareapp@gmail.com</a></p>
+  </section>
+
+  <footer>&copy; 2026 SpotShare. Wszelkie prawa zastrzeżone.</footer>
+</main>
+
+<script>
+  (function () {
+    var titles = { en: "SpotShare Privacy Policy", pl: "SpotShare – Polityka prywatności" };
+    var buttons = document.querySelectorAll("[data-set-lang]");
+
+    function apply(lang) {
+      document.documentElement.lang = lang;
+      document.title = titles[lang];
+      buttons.forEach(function (b) {
+        b.setAttribute("aria-pressed", String(b.getAttribute("data-set-lang") === lang));
+      });
+    }
+
+    buttons.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var lang = b.getAttribute("data-set-lang");
+        try { localStorage.setItem("lang", lang); } catch (e) {}
+        apply(lang);
+      });
+    });
+
+    apply(document.documentElement.lang === "pl" ? "pl" : "en");
+  })();
+</script>
 
 </body>
 </html>
