@@ -41,8 +41,8 @@
     "how.s1p": "Każde osiedle ma własny kod. Poproś o niego administratora osiedla — bez kodu nikt nie dołączy.",
     "how.s2t": "Załóż konto",
     "how.s2p": "Wpisz kod, a następnie bezpiecznie zarejestruj się przez Microsoft. Parking Spot Share nigdy nie widzi Twojego hasła.",
-    "how.s3t": "Dodaj mieszkanie i miejsce",
-    "how.s3p": "Podaj numer mieszkania i, jeśli masz, swoje miejsce parkingowe — maksymalnie trzy. To wszystko.",
+    "how.s3t": "Dodaj swoje miejsce parkingowe",
+    "how.s3p": "Jeśli masz miejsce parkingowe, dodaj je, aby móc udostępniać je sąsiadom — maksymalnie trzy. To wszystko.",
 
     "share.eyebrow": "Udostępnij miejsce",
     "share.title": "Nie ma Cię cały dzień? Niech Twoje miejsce się przyda.",
@@ -62,7 +62,7 @@
     "split.stillOpen": "Wolne dla innych",
 
     "req.eyebrow": "Poproś o miejsce",
-    "req.title": "Brak ofert? Zapytaj, a sąsiedzi dostaną powiadomienie.",
+    "req.title": "Potrzebujesz miejsca parkingowego?",
     "req.lead": "Dodaj zapytanie na potrzebny czas. Każdy na Twoim osiedlu, kto ma miejsce parkingowe, dostanie powiadomienie push. Gdy ktoś je zaakceptuje, rezerwacja utworzy się automatycznie.",
     "flow.1t": "Dodajesz zapytanie",
     "flow.1s": "Jutro, 09:00–17:00",
