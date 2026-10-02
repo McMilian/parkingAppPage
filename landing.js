@@ -8,7 +8,7 @@
     "nav.get": "Pobierz",
 
     "hero.title": "Parking, którym<br><span class=\"gradient-text\">dzielą się sąsiedzi.</span>",
-    "hero.lead": "Udostępnij swoje miejsce, gdy Cię nie ma. Zarezerwuj miejsce sąsiada, gdy go potrzebujesz. Parking Spot Share zamienia puste miejsca w garażu Twojego budynku w parking dla jego mieszkańców.",
+    "hero.lead": "Udostępnij swoje miejsce, gdy Cię nie ma. Zarezerwuj miejsce sąsiada, gdy go potrzebujesz. Parking Spot Share pozwala mieszkańcom osiedla udostępniać sobie nawzajem miejsca, aby brak parkingu dla gości przestał być problemem.",
     "hero.note": "Na iPhone’a i Androida · po polsku i angielsku",
     "store.appleSmall": "Pobierz w",
     "store.googleSmall": "Pobierz z",
