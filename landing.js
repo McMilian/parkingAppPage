@@ -46,8 +46,8 @@
 
     "share.eyebrow": "Udostępnij miejsce",
     "share.title": "Nie ma Cię cały dzień? Niech Twoje miejsce się przyda.",
-    "share.lead": "Wybierz godziny, w których go nie potrzebujesz, dodaj notatkę lub cenę za dzień i opublikuj. Sąsiedzi od razu zobaczą ofertę.",
-    "share.t1": "Opcjonalna cena za dzień — albo udostępnij za darmo",
+    "share.lead": "Wybierz godziny, w których go nie potrzebujesz, dodaj notatkę i opublikuj. Sąsiedzi od razu zobaczą ofertę.",
+    "share.t1": "Kilka godzin albo cały tydzień — Ty decydujesz",
     "share.t2": "Notatki, np. „zadaszone, blisko windy”",
     "share.t3": "Edytuj lub anuluj w każdej chwili, zanim ktoś zarezerwuje",
 
@@ -94,7 +94,7 @@
     "more.5t": "Elastyczne zakresy czasu",
     "more.5p": "Szukaj ofert na najbliższe 24 godziny, 3 dni lub tydzień albo wybierz dokładne daty i godziny.",
     "more.6t": "Zawsze do edycji",
-    "more.6p": "Zmieniaj godziny, cenę lub notatkę oferty, dopóki ktoś jej nie zarezerwuje, i aktualizuj swoje miejsca, kiedy chcesz.",
+    "more.6p": "Zmieniaj godziny lub notatkę oferty, dopóki ktoś jej nie zarezerwuje, i aktualizuj swoje miejsca, kiedy chcesz.",
 
     "priv.eyebrow": "Prywatność",
     "priv.title": "Stworzone dla sąsiadów.<br>Prywatne od podstaw.",
@@ -148,8 +148,6 @@
     "m.spotA12": "Poziom -1 · Miejsce A12",
     "m.spotB04": "Poziom -2 · Miejsce B04",
     "m.spotC21": "Poziom -1 · Miejsce C21",
-    "m.price15": "15 zł/dzień",
-    "m.price10": "10 zł/dzień",
     "m.today0820": "Dziś 08:00–20:00",
     "m.todayFri": "Dziś 07:00 – pt. 22:00",
     "m.tonight": "Dziś 19:00 – jutro 07:00",
@@ -165,7 +163,6 @@
     "m.today2000": "Dziś, 20:00",
     "m.today1000": "Dziś, 10:00",
     "m.today1400": "Dziś, 14:00",
-    "m.priceOpt": "Cena za dzień (opcjonalnie)",
     "m.notesOpt": "Uwagi (opcjonalnie)",
     "m.postOffer": "Dodaj ofertę",
     "m.bookSpot": "Zarezerwuj miejsce",
