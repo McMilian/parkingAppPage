@@ -607,6 +607,122 @@
 
   .note-pill .i { color: var(--blue); width: 18px; height: 18px; margin-top: 2px; }
 
+  /* ── Refreshed app design (PageHeader, CardParts, FormSheet, MonthCalendar) at ~0.67x ── */
+
+  .screen.x-bg { background: #F2F2F2; }
+  .screen.x-dark { background: #000; }
+  .x-header { flex: none; display: flex; align-items: center; gap: 8px; background: #fff; padding: 2px 11px 8px; border-bottom: 0.5px solid #e2e5ea; }
+  .x-back { color: #08274F; margin: 0 -4px 0 -5px; display: grid; }
+  .x-back .i { width: 19px; height: 19px; }
+  .x-badge { width: 27px; height: 27px; border-radius: 50%; background: #08274F; color: #fff; display: grid; place-items: center; flex: none; }
+  .x-badge .i { width: 15px; height: 15px; }
+  .x-htext { flex: 1; min-width: 0; }
+  .x-title { font-size: 13.4px; font-weight: 700; color: #08274F; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .x-sub { font-size: 8.7px; color: #666; margin-top: 1px; }
+  .x-hbtn { width: 27px; height: 27px; border-radius: 50%; background: #EAF0F7; color: #08274F; display: grid; place-items: center; flex: none; }
+  .x-hbtn .i { width: 15px; height: 15px; }
+  .x-body { flex: 1; overflow: hidden; padding: 16px; }
+  .x-sec { font-size: 8.7px; font-weight: 700; color: #666; text-transform: uppercase; letter-spacing: 0.35px; margin-bottom: 7px; }
+  .x-sec.tight { margin: 2px 0 -2px; }
+  .x-stats { border-radius: 9.5px; overflow: hidden; border: 0.5px solid #e0e0e0; margin-bottom: 19px; background: #fff; }
+  .x-stat { display: flex; align-items: center; gap: 8px; padding: 8px 9.5px; }
+  .x-stat + .x-stat { border-top: 0.5px solid #e5e7eb; }
+  .x-stat .ic { width: 24px; height: 24px; border-radius: 50%; background: #EAF0F7; color: #08274F; display: grid; place-items: center; flex: none; }
+  .x-stat .ic .i { width: 13.5px; height: 13.5px; }
+  .x-stat .lbl { flex: 1; font-size: 10px; color: #333; }
+  .x-stat .val { font-size: 14.7px; font-weight: 700; color: #08274F; }
+  .x-stat .chev { color: #bbb; display: grid; }
+  .x-stat .chev .i { width: 15px; height: 15px; }
+  .x-stat .chev-space { width: 15px; }
+  .x-action { display: flex; align-items: center; gap: 9.5px; border-radius: 9.5px; padding: 10.5px; margin-bottom: 8px; background: #fff; border: 1px solid #08274F; }
+  .x-action .ic { width: 31px; height: 31px; border-radius: 50%; background: #08274F; color: #fff; display: grid; place-items: center; flex: none; }
+  .x-action .ic .i { width: 16px; height: 16px; }
+  .x-action .tx { flex: 1; display: grid; gap: 2px; }
+  .x-action b { font-size: 10.7px; color: #08274F; }
+  .x-action small { font-size: 8.7px; color: #555; line-height: 1.35; }
+  .x-action .chev { color: #08274F; display: grid; }
+  .x-action .chev .i { width: 16px; height: 16px; }
+  .x-action.primary { background: #08274F; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); }
+  .x-action.primary .ic { background: #fff; color: #08274F; }
+  .x-action.primary b, .x-action.primary .chev { color: #fff; }
+  .x-action.primary small { color: #D6E0EE; }
+  .x-desc { font-size: 8.7px; color: #666; margin: 8px 11px 0; line-height: 1.35; flex: none; }
+  .x-list { flex: 1; overflow: hidden; padding: 11px; display: flex; flex-direction: column; gap: 8px; }
+  .x-cal { background: #fff; border-radius: 9.5px; border: 0.5px solid #e0e0e0; padding: 8px; flex: none; }
+  .x-cal-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+  .x-cal-head b { font-size: 11.4px; color: #08274F; }
+  .x-cal-head .nav { width: 25px; height: 25px; border-radius: 50%; background: #F5F8FC; color: #08274F; display: grid; place-items: center; }
+  .x-cal-head .nav.off { background: transparent; color: #ccc; }
+  .x-cal-head .nav .i { width: 16px; height: 16px; }
+  .x-wd, .x-grid { display: grid; grid-template-columns: repeat(7, 1fr); }
+  .x-wd span { text-align: center; font-size: 8px; font-weight: 600; color: #999; padding: 2px 0; }
+  .x-grid > span { display: flex; flex-direction: column; align-items: center; padding: 1.5px 0; }
+  .x-grid .d { width: 23px; height: 23px; border-radius: 50%; display: grid; place-items: center; font-size: 9.8px; color: #222; }
+  .x-grid .d.past { color: #ccc; }
+  .x-grid .d.today { box-shadow: inset 0 0 0 1.2px #08274F; }
+  .x-grid .d.sel { background: #08274F; color: #fff; font-weight: 700; }
+  .x-grid .dot { width: 4px; height: 4px; border-radius: 50%; margin-top: 1px; }
+  .x-grid .dot.on { background: #08274F; }
+  .x-grid .d.sel + .dot.on { opacity: 0.5; }
+  .x-daytitle { font-size: 10.7px; font-weight: 700; color: #333; margin-top: 2px; flex: none; }
+  .x-card { display: flex; background: #fff; border-radius: 9.5px; border: 0.5px solid #e0e0e0; overflow: hidden; flex: none; }
+  .x-card.muted { opacity: 0.7; }
+  .x-card .acc { width: 3.5px; background: #08274F; flex: none; }
+  .x-cbody { flex: 1; padding: 9.5px; display: grid; gap: 5px; }
+  .x-chead { display: flex; justify-content: space-between; align-items: flex-start; gap: 6px; }
+  .x-when { display: flex; align-items: flex-start; gap: 4px; font-size: 10px; font-weight: 700; color: #08274F; line-height: 1.3; letter-spacing: -0.1px; }
+  .x-when.big { font-size: 11.4px; align-items: center; }
+  .x-when .i { width: 12px; height: 12px; flex: none; margin-top: 1px; }
+  .x-row { display: flex; align-items: center; gap: 5.5px; font-size: 9.4px; color: #444; }
+  .x-row.strong { font-weight: 600; color: #333; font-size: 10px; }
+  .x-row .ri { width: 15px; height: 15px; border-radius: 50%; background: #F2F5FA; color: #08274F; display: grid; place-items: center; flex: none; }
+  .x-row .ri.p { width: 16px; height: 16px; background: #EAF0F7; }
+  .x-row .ri .i { width: 10px; height: 10px; }
+  .x-hint { font-size: 8.7px; color: #888; font-style: italic; margin: -2px 0 0 21.5px; }
+  .x-note { display: flex; align-items: flex-start; gap: 4px; font-size: 8.7px; color: #666; }
+  .x-note .i { width: 11px; height: 11px; color: #888; flex: none; }
+  .x-btn { display: flex; align-items: center; justify-content: center; gap: 5px; background: #08274F; color: #fff; border-radius: 7px; padding: 8px; font-size: 10px; font-weight: 700; margin-top: 3px; }
+  .x-btn .i { width: 12px; height: 12px; }
+  .x-btn2 { display: inline-flex; align-items: center; gap: 4px; border: 1px solid #08274F; color: #08274F; background: #fff; border-radius: 7px; padding: 5.5px 9px; font-size: 9.4px; font-weight: 700; margin-top: 2px; }
+  .x-btn2 .i { width: 11.5px; height: 11.5px; }
+  .x-pill { display: inline-flex; align-items: center; gap: 3px; border-radius: 999px; border: 0.7px solid; padding: 2px 5.5px; font-size: 8px; font-weight: 700; white-space: nowrap; flex: none; }
+  .x-pill i { width: 4px; height: 4px; border-radius: 50%; }
+  .x-seg { flex: none; display: flex; margin: 11px 11px 0; border-radius: 7px; background: #f0f0f0; padding: 2px; border: 0.7px solid #d5d5d5; }
+  .x-seg span { flex: 1; min-height: 31px; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 9.4px; line-height: 1.2; color: #888; font-weight: 500; border-radius: 5.5px; padding: 3px; }
+  .x-seg span.on { background: #fff; color: #08274F; font-weight: 700; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); }
+  .x-fab { position: absolute; right: 14px; bottom: 60px; background: #08274F; color: #fff; border-radius: 19px; padding: 9px 13px; font-size: 10px; font-weight: 700; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); }
+  .x-behind { flex: none; height: 9px; margin: 0 11px; background: #8C9099; border-radius: 10px 10px 0 0; }
+  .x-sheet { flex: 1; overflow: hidden; background: #F6F7F9; border-radius: 11px 11px 0 0; padding: 20px 13.5px 0; }
+  .x-sh { display: flex; align-items: flex-start; gap: 9.5px; margin-bottom: 17px; }
+  .x-sh .ic { width: 31px; height: 31px; border-radius: 50%; background: #08274F; color: #fff; display: grid; place-items: center; flex: none; }
+  .x-sh .ic .i { width: 16px; height: 16px; }
+  .x-sh div { display: grid; gap: 3px; padding-top: 1px; }
+  .x-sh b { font-size: 14.7px; color: #08274F; line-height: 1.2; }
+  .x-sh small { font-size: 9.4px; color: #555; line-height: 1.35; }
+  .x-ssec { margin-bottom: 14px; }
+  .x-shd { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5.5px; }
+  .x-shd .t { font-size: 8.7px; font-weight: 700; color: #666; text-transform: uppercase; letter-spacing: 0.35px; }
+  .x-dur { display: inline-flex; align-items: center; gap: 3px; border-radius: 999px; background: #EAF0F7; padding: 2px 6px; font-size: 8px; font-weight: 700; color: #08274F; }
+  .x-dur .i { width: 9.5px; height: 9.5px; }
+  .x-sbox { background: #fff; border-radius: 9.5px; border: 0.5px solid #e0e0e0; padding: 9.5px; display: grid; gap: 9.5px; }
+  .x-flabel { font-size: 8.7px; font-weight: 600; color: #444; margin-bottom: 5px; }
+  .x-chips { display: flex; gap: 6.5px; }
+  .x-chip { flex: 1; display: flex; align-items: center; gap: 6.5px; border: 0.7px solid #E3E8EE; border-radius: 8px; padding: 6.5px 8px; background: #F6F8FB; color: #08274F; }
+  .x-chip .i { width: 13px; height: 13px; flex: none; }
+  .x-chip div { display: grid; }
+  .x-chip small { font-size: 7.4px; color: #888; }
+  .x-chip b { font-size: 10px; color: #08274F; white-space: nowrap; }
+  .x-notes { font-size: 10px; color: #222; min-height: 24px; }
+  .x-nhint { font-size: 8.4px; color: #777; line-height: 1.35; }
+  .x-submit { display: flex; align-items: center; justify-content: center; gap: 5.5px; background: #08274F; color: #fff; border-radius: 8px; padding: 10px; font-size: 10.7px; font-weight: 700; }
+  .x-submit .i { width: 13px; height: 13px; }
+  .x-cancel { text-align: center; padding: 8px; color: #666; font-size: 10px; }
+  .x-meta { display: flex; align-items: center; gap: 8px; }
+  .x-meta .mi { width: 23px; height: 23px; border-radius: 50%; background: #F2F5FA; color: #08274F; display: grid; place-items: center; flex: none; }
+  .x-meta .mi .i { width: 12px; height: 12px; }
+  .x-meta .mv { font-size: 10px; font-weight: 600; color: #222; line-height: 1.3; }
+  .x-meta .mh { font-size: 8.7px; color: #888; font-style: italic; }
+
   /* ── Garage map mockup (colours from the app's GarageMapView) ── */
 
   .new-pill {
@@ -788,6 +904,13 @@
     <symbol id="i-pencil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
     <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+    <symbol id="i-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></symbol>
+    <symbol id="i-note" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></symbol>
+    <symbol id="i-calendar-blank" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-timer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M10 2h4"/></symbol>
+    <symbol id="i-dots" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M7.5 12h.01M12 12h.01M16.5 12h.01" stroke-width="3"/></symbol>
     <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
     <symbol id="i-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"/></symbol>
     <symbol id="i-fit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/><rect x="8" y="8" width="8" height="8" rx="1"/></symbol>
@@ -840,66 +963,67 @@
     <div class="hero-phones" aria-hidden="true">
       <!-- Home screen -->
       <div class="phone">
-        <div class="screen">
-          <div class="island"></div>
-          <div class="statusbar"><span>9:41</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i><span class="batt"></span></span></div>
-          <div class="app-body">
-            <div class="a-head">
-              <div><div class="a-greet" data-i18n="m.greet">Hello, Kasia</div><div class="a-comm">Sunset Residence</div></div>
-              <svg class="i"><use href="#i-cog"/></svg>
+          <div class="screen x-bg">
+            <div class="island"></div>
+            <div class="statusbar"><span>9:41</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i><span class="batt"></span></span></div>
+            
+            <div class="x-header">
+              
+              <span class="x-badge"><svg class="i"><use href="#i-home"/></svg></span>
+              <div class="x-htext"><div class="x-title" data-i18n="m.greet">Hello, Kasia</div><div class="x-sub">Sunset Residence</div></div>
+              <span class="x-hbtn"><svg class="i"><use href="#i-car"/></svg></span><span class="x-hbtn"><svg class="i"><use href="#i-cog"/></svg></span>
             </div>
-            <div class="a-sec" data-i18n="m.commNow">In your community now</div>
-            <div class="a-stats">
-              <div class="a-stat"><span class="ic"><svg class="i"><use href="#i-parking"/></svg></span><span class="lbl" data-i18n="m.activeOffers">Active offers</span><span class="val">4</span></div>
-              <div class="a-stat"><span class="ic"><svg class="i"><use href="#i-send"/></svg></span><span class="lbl" data-i18n="m.activeRequests">Active requests</span><span class="val">2</span></div>
-              <div class="a-stat"><span class="ic"><svg class="i"><use href="#i-users"/></svg></span><span class="lbl" data-i18n="m.residents">Registered community users</span><span class="val">86</span></div>
+            <div class="x-body">
+              <div class="x-sec" data-i18n="m.commNow">In your community now</div>
+              <div class="x-stats">
+                <div class="x-stat"><span class="ic"><svg class="i"><use href="#i-parking"/></svg></span><span class="lbl" data-i18n="m.activeOffers">Active offers</span><span class="val">4</span><span class="chev"><svg class="i"><use href="#i-chevron-right"/></svg></span></div>
+                <div class="x-stat"><span class="ic"><svg class="i"><use href="#i-send"/></svg></span><span class="lbl" data-i18n="m.activeRequests">Active requests</span><span class="val">2</span><span class="chev"><svg class="i"><use href="#i-chevron-right"/></svg></span></div>
+                <div class="x-stat"><span class="ic"><svg class="i"><use href="#i-users"/></svg></span><span class="lbl" data-i18n="m.residents">Registered community users</span><span class="val">86</span><span class="chev-space"></span></div>
+              </div>
+              <div class="x-sec" data-i18n="m.actions">What would you like to do?</div>
+              <div class="x-action primary"><span class="ic"><svg class="i"><use href="#i-bell"/></svg></span><span class="tx"><b data-i18n="m.reqTitle">Ask for a parking spot</b><small data-i18n="m.reqDesc">All registered users in your community will be notified about your request.</small></span><span class="chev"><svg class="i"><use href="#i-chevron-right"/></svg></span></div>
+              <div class="x-action"><span class="ic"><svg class="i"><use href="#i-car"/></svg></span><span class="tx"><b data-i18n="m.offerTitle">Add an offer</b><small data-i18n="m.offerDesc">Offer your parking spot for the hours you choose.</small></span><span class="chev"><svg class="i"><use href="#i-chevron-right"/></svg></span></div>
+              <div class="x-action"><span class="ic"><svg class="i"><use href="#i-map"/></svg></span><span class="tx"><b data-i18n="m.mapTitle">Garage map</b><small data-i18n="m.mapDesc">See where the spots, stairwells and entrances are.</small></span><span class="chev"><svg class="i"><use href="#i-chevron-right"/></svg></span></div>
             </div>
-            <div class="a-sec" data-i18n="m.actions">What would you like to do?</div>
-            <div class="a-card primary"><span class="ic"><svg class="i"><use href="#i-bell"/></svg></span><span><b data-i18n="m.reqTitle">Ask for a parking spot</b><small data-i18n="m.reqDesc">All registered users in your community will be notified about your request.</small></span></div>
-            <div class="a-card"><span class="ic"><svg class="i"><use href="#i-car"/></svg></span><span><b data-i18n="m.offerTitle">Add an offer</b><small data-i18n="m.offerDesc">Offer your parking spot for the hours you choose.</small></span></div>
-          </div>
-          <div class="tabbar">
-            <span class="tab on"><svg class="i"><use href="#i-home"/></svg><span data-i18n="m.tabHome">Home</span></span>
-            <span class="tab"><svg class="i"><use href="#i-parking"/></svg><span data-i18n="m.tabOffers">Parking Offers</span></span>
-            <span class="tab"><svg class="i"><use href="#i-calendar"/></svg><span data-i18n="m.tabBookings">My bookings &amp; parking</span></span>
-            <span class="tab"><svg class="i"><use href="#i-send"/></svg><span data-i18n="m.tabRequests">Requests</span></span>
+            <div class="tabbar"><span class="tab on"><svg class="i"><use href="#i-home"/></svg><span data-i18n="m.tabHome">Home</span></span><span class="tab"><svg class="i"><use href="#i-parking"/></svg><span data-i18n="m.tabOffers">Parking Offers</span></span><span class="tab"><svg class="i"><use href="#i-calendar"/></svg><span data-i18n="m.tabBookings">My bookings &amp; parking</span></span><span class="tab"><svg class="i"><use href="#i-send"/></svg><span data-i18n="m.tabRequests">Requests</span></span></div>
           </div>
         </div>
-      </div>
 
       <!-- Parking offers -->
       <div class="phone">
-        <div class="screen">
-          <div class="island"></div>
-          <div class="statusbar"><span>9:41</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i><span class="batt"></span></span></div>
-          <div class="navbar-title" data-i18n="m.tabOffers">Parking Offers</div>
-          <div class="app-body grey">
-            <div class="a-chips"><span class="a-chip" data-i18n="m.next10">Next 10</span><span class="a-chip on" data-i18n="m.next24">Next 24h</span><span class="a-chip" data-i18n="m.next3">Next 3 days</span><span class="a-chip" data-i18n="m.week">Next week</span></div>
-            <div class="a-offer">
-              <div class="top"><span class="t" data-i18n="m.spotA12">Level -1 · Spot A12</span></div>
-              <div class="time" data-i18n="m.today0820">Today 08:00–20:00</div>
-              <div class="note" data-i18n="m.noteCovered">Covered, near the lift</div>
-              <div class="a-btn" data-i18n="m.book">Book</div>
+          <div class="screen x-bg">
+            <div class="island"></div>
+            <div class="statusbar"><span>9:41</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i><span class="batt"></span></span></div>
+            
+            <div class="x-header">
+              
+              <span class="x-badge"><svg class="i"><use href="#i-parking"/></svg></span>
+              <div class="x-htext"><div class="x-title" data-i18n="m.tabOffers">Parking Offers</div></div>
+              
             </div>
-            <div class="a-offer">
-              <div class="top"><span class="t" data-i18n="m.spotB04">Level -2 · Spot B04</span></div>
-              <div class="time" data-i18n="m.todayFri">Today 07:00 – Fri 22:00</div>
-              <div class="note" data-i18n="m.noteAway">Away until Friday</div>
-              <div class="a-btn" data-i18n="m.book">Book</div>
+            <div class="x-desc" data-i18n="m.offersDesc">Days with a dot have spots offered by your neighbours. Pick a day and book a spot for the time you need.</div>
+            <div class="x-list">
+              <div class="x-cal">
+                <div class="x-cal-head"><span class="nav off"><svg class="i"><use href="#i-chevron-left"/></svg></span><b data-i18n="m.month">October 2026</b><span class="nav"><svg class="i"><use href="#i-chevron-right"/></svg></span></div>
+                <div class="x-wd" data-i18n="m.weekdays"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+                <div class="x-grid"><span></span><span></span><span></span><span><span class="d past">1</span><i class="dot"></i></span><span><span class="d past">2</span><i class="dot"></i></span><span><span class="d past">3</span><i class="dot"></i></span><span><span class="d past">4</span><i class="dot"></i></span><span><span class="d past">5</span><i class="dot"></i></span><span><span class="d past">6</span><i class="dot"></i></span><span><span class="d past">7</span><i class="dot"></i></span><span><span class="d past">8</span><i class="dot"></i></span><span><span class="d past">9</span><i class="dot"></i></span><span><span class="d past">10</span><i class="dot"></i></span><span><span class="d past">11</span><i class="dot"></i></span><span><span class="d past">12</span><i class="dot"></i></span><span><span class="d past">13</span><i class="dot"></i></span><span><span class="d past">14</span><i class="dot"></i></span><span><span class="d past">15</span><i class="dot"></i></span><span><span class="d past">16</span><i class="dot"></i></span><span><span class="d today">17</span><i class="dot on"></i></span><span><span class="d sel">18</span><i class="dot on"></i></span><span><span class="d">19</span><i class="dot on"></i></span><span><span class="d">20</span><i class="dot"></i></span><span><span class="d">21</span><i class="dot on"></i></span><span><span class="d">22</span><i class="dot"></i></span><span><span class="d">23</span><i class="dot"></i></span><span><span class="d">24</span><i class="dot on"></i></span><span><span class="d">25</span><i class="dot on"></i></span><span><span class="d">26</span><i class="dot"></i></span><span><span class="d">27</span><i class="dot"></i></span><span><span class="d">28</span><i class="dot on"></i></span><span><span class="d">29</span><i class="dot"></i></span><span><span class="d">30</span><i class="dot"></i></span><span><span class="d">31</span><i class="dot on"></i></span><span></span></div>
+              </div>
+              <div class="x-daytitle" data-i18n="m.dayTitle">Offers on Sunday, October 18</div>
+              <div class="x-card"><span class="acc"></span><div class="x-cbody">
+                <div class="x-chead"><span class="x-when big"><svg class="i"><use href="#i-clock"/></svg><span>08:00 – 20:00</span></span></div>
+                <div class="x-row strong"><span class="ri p"><svg class="i"><use href="#i-parking"/></svg></span><span data-i18n="m.level1">Level -1</span></div>
+                <div class="x-hint" data-i18n="m.afterBooking">spot number shown after booking</div>
+                <div class="x-note"><svg class="i"><use href="#i-note"/></svg><span data-i18n="m.noteCovered">Covered, near the lift</span></div>
+                <div class="x-btn"><svg class="i"><use href="#i-calendar"/></svg><span data-i18n="m.book">Book</span></div>
+              </div></div>
+              <div class="x-card"><span class="acc"></span><div class="x-cbody">
+                <div class="x-chead"><span class="x-when big"><svg class="i"><use href="#i-clock"/></svg><span>07:00 – 18:00</span></span></div>
+                <div class="x-row strong"><span class="ri p"><svg class="i"><use href="#i-parking"/></svg></span><span data-i18n="m.level2">Level -2</span></div>
+              </div></div>
             </div>
-            <div class="a-offer">
-              <div class="top"><span class="t" data-i18n="m.spotC21">Level -1 · Spot C21</span><span style="display:flex;gap:5px;align-items:center"><span class="a-badge" data-i18n="m.booked">Booked</span></span></div>
-              <div class="time" data-i18n="m.tonight">Today 19:00 – Tomorrow 07:00</div>
-            </div>
-          </div>
-          <div class="tabbar">
-            <span class="tab"><svg class="i"><use href="#i-home"/></svg><span data-i18n="m.tabHome">Home</span></span>
-            <span class="tab on"><svg class="i"><use href="#i-parking"/></svg><span data-i18n="m.tabOffers">Parking Offers</span></span>
-            <span class="tab"><svg class="i"><use href="#i-calendar"/></svg><span data-i18n="m.tabBookings">My bookings &amp; parking</span></span>
-            <span class="tab"><svg class="i"><use href="#i-send"/></svg><span data-i18n="m.tabRequests">Requests</span></span>
+            <div class="tabbar"><span class="tab"><svg class="i"><use href="#i-home"/></svg><span data-i18n="m.tabHome">Home</span></span><span class="tab on"><svg class="i"><use href="#i-parking"/></svg><span data-i18n="m.tabOffers">Parking Offers</span></span><span class="tab"><svg class="i"><use href="#i-calendar"/></svg><span data-i18n="m.tabBookings">My bookings &amp; parking</span></span><span class="tab"><svg class="i"><use href="#i-send"/></svg><span data-i18n="m.tabRequests">Requests</span></span></div>
           </div>
         </div>
-      </div>
     </div>
   </section>
 
@@ -1050,32 +1174,31 @@
       </div>
       <div class="feature-media reveal" aria-hidden="true">
         <div class="phone">
-          <div class="screen">
+          <div class="screen x-dark">
             <div class="island"></div>
-            <div class="statusbar"><span>9:41</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i><span class="batt"></span></span></div>
-            <div class="app-body">
-              <div class="a-head"><div><div class="a-greet" data-i18n="m.greet">Hello, Kasia</div><div class="a-comm">Sunset Residence</div></div><svg class="i"><use href="#i-cog"/></svg></div>
-              <div class="a-sec" data-i18n="m.commNow">In your community now</div>
-              <div class="a-stats">
-                <div class="a-stat"><span class="ic"><svg class="i"><use href="#i-parking"/></svg></span><span class="lbl" data-i18n="m.activeOffers">Active offers</span><span class="val">4</span></div>
-                <div class="a-stat"><span class="ic"><svg class="i"><use href="#i-send"/></svg></span><span class="lbl" data-i18n="m.activeRequests">Active requests</span><span class="val">2</span></div>
-                <div class="a-stat"><span class="ic"><svg class="i"><use href="#i-users"/></svg></span><span class="lbl" data-i18n="m.residents">Registered community users</span><span class="val">86</span></div>
+            <div class="statusbar" style="color:#fff"><span>9:41</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i><span class="batt"></span></span></div>
+            <div class="x-behind"></div>
+            <div class="x-sheet">
+              <div class="x-sh"><span class="ic"><svg class="i"><use href="#i-car"/></svg></span><div><b data-i18n="m.postOfferTitle">Post a share offer</b><small data-i18n="m.offerDesc">Offer your parking spot for the hours you choose.</small></div></div>
+              <div class="x-ssec">
+                <div class="x-shd"><span class="t" data-i18n="m.when">When</span><span class="x-dur"><svg class="i"><use href="#i-timer"/></svg><span data-i18n="m.dur12">Duration: 12 h</span></span></div>
+                <div class="x-sbox">
+                  <div><div class="x-flabel" data-i18n="m.from">From</div><div class="x-chips">
+                    <div class="x-chip"><svg class="i"><use href="#i-calendar-blank"/></svg><div><small data-i18n="m.date">Date</small><b data-i18n="m.oct19">Oct 19, 2026</b></div></div>
+                    <div class="x-chip"><svg class="i"><use href="#i-clock"/></svg><div><small data-i18n="m.time">Time</small><b>08:00</b></div></div>
+                  </div></div>
+                  <div><div class="x-flabel" data-i18n="m.to">To</div><div class="x-chips">
+                    <div class="x-chip"><svg class="i"><use href="#i-calendar-blank"/></svg><div><small data-i18n="m.date">Date</small><b data-i18n="m.oct19">Oct 19, 2026</b></div></div>
+                    <div class="x-chip"><svg class="i"><use href="#i-clock"/></svg><div><small data-i18n="m.time">Time</small><b>20:00</b></div></div>
+                  </div></div>
+                </div>
               </div>
-            </div>
-            <div class="a-dim"></div>
-            <div class="a-sheet">
-              <div class="grab"></div>
-              <h4 data-i18n="m.postOfferTitle">Post a share offer</h4>
-              <div class="a-label" data-i18n="m.parkingSpace">Parking space</div>
-              <div class="a-input sel" data-i18n="m.spotA12">Level -1 · Spot A12</div>
-              <div class="a-row">
-                <div><div class="a-label" data-i18n="m.from">From</div><div class="a-input" data-i18n="m.today0800">Today, 08:00</div></div>
-                <div><div class="a-label" data-i18n="m.to">To</div><div class="a-input" data-i18n="m.today2000">Today, 20:00</div></div>
+              <div class="x-ssec">
+                <div class="x-shd"><span class="t" data-i18n="m.notesOpt">Notes (optional)</span></div>
+                <div class="x-sbox"><div class="x-notes" data-i18n="m.noteCovered">Covered, near the lift</div><div class="x-nhint" data-i18n="m.notesHint">Don't enter the spot number here. Only the person who books the spot will see it, once the booking is made.</div></div>
               </div>
-              <div class="a-label" data-i18n="m.notesOpt">Notes (optional)</div>
-              <div class="a-input" data-i18n="m.noteCovered">Covered, near the lift</div>
-              <div class="a-btn" data-i18n="m.postOffer">Post offer</div>
-            </div>
+              <div class="x-submit"><svg class="i"><use href="#i-check"/></svg><span data-i18n="m.postOffer">Post offer</span></div>
+              <div class="x-cancel" data-i18n="m.cancel">Cancel</div></div>
           </div>
         </div>
       </div>
@@ -1104,37 +1227,34 @@
       </div>
       <div class="feature-media reveal" aria-hidden="true">
         <div class="phone">
-          <div class="screen">
+          <div class="screen x-dark">
             <div class="island"></div>
-            <div class="statusbar"><span>9:41</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i><span class="batt"></span></span></div>
-            <div class="navbar-title" data-i18n="m.tabOffers">Parking Offers</div>
-            <div class="app-body grey">
-              <div class="a-chips"><span class="a-chip" data-i18n="m.next10">Next 10</span><span class="a-chip on" data-i18n="m.next24">Next 24h</span><span class="a-chip" data-i18n="m.next3">Next 3 days</span><span class="a-chip" data-i18n="m.week">Next week</span></div>
-              <div class="a-offer">
-                <div class="top"><span class="t" data-i18n="m.spotA12">Level -1 · Spot A12</span></div>
-                <div class="time" data-i18n="m.today0820">Today 08:00–20:00</div>
-                <div class="a-btn" data-i18n="m.book">Book</div>
+            <div class="statusbar" style="color:#fff"><span>9:41</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i><span class="batt"></span></span></div>
+            <div class="x-behind"></div>
+            <div class="x-sheet">
+              <div class="x-sh"><span class="ic"><svg class="i"><use href="#i-calendar"/></svg></span><div><b data-i18n="m.bookSpot">Book a spot</b></div></div>
+              <div class="x-ssec">
+                <div class="x-shd"><span class="t" data-i18n="m.offerSec">Offer</span></div>
+                <div class="x-sbox">
+                  <div class="x-meta"><span class="mi"><svg class="i"><use href="#i-parking"/></svg></span><div><div class="mv" data-i18n="m.level1">Level -1</div><div class="mh" data-i18n="m.afterBooking">spot number shown after booking</div></div></div>
+                  <div class="x-meta"><span class="mi"><svg class="i"><use href="#i-clock"/></svg></span><div class="mv" data-i18n="m.available">Available: Oct 18, 2026 08:00-20:00</div></div>
+                </div>
               </div>
-              <div class="a-offer">
-                <div class="top"><span class="t" data-i18n="m.spotB04">Level -2 · Spot B04</span></div>
-                <div class="time" data-i18n="m.todayFri">Today 07:00 – Fri 22:00</div>
-                <div class="a-btn" data-i18n="m.book">Book</div>
+              <div class="x-ssec">
+                <div class="x-shd"><span class="t" data-i18n="m.when">When</span><span class="x-dur"><svg class="i"><use href="#i-timer"/></svg><span data-i18n="m.dur4">Duration: 4 h</span></span></div>
+                <div class="x-sbox">
+                  <div><div class="x-flabel" data-i18n="m.from">From</div><div class="x-chips">
+                    <div class="x-chip"><svg class="i"><use href="#i-calendar-blank"/></svg><div><small data-i18n="m.date">Date</small><b data-i18n="m.oct18">Oct 18, 2026</b></div></div>
+                    <div class="x-chip"><svg class="i"><use href="#i-clock"/></svg><div><small data-i18n="m.time">Time</small><b>10:00</b></div></div>
+                  </div></div>
+                  <div><div class="x-flabel" data-i18n="m.to">To</div><div class="x-chips">
+                    <div class="x-chip"><svg class="i"><use href="#i-calendar-blank"/></svg><div><small data-i18n="m.date">Date</small><b data-i18n="m.oct18">Oct 18, 2026</b></div></div>
+                    <div class="x-chip"><svg class="i"><use href="#i-clock"/></svg><div><small data-i18n="m.time">Time</small><b>14:00</b></div></div>
+                  </div></div>
+                </div>
               </div>
-            </div>
-            <div class="a-dim"></div>
-            <div class="a-sheet">
-              <div class="grab"></div>
-              <h4 data-i18n="m.bookSpot">Book a spot</h4>
-              <div class="a-offer" style="background:#F4F6F9;border:0">
-                <div class="top"><span class="t" data-i18n="m.spotA12">Level -1 · Spot A12</span></div>
-                <div class="time" data-i18n="m.available">Available: Today 08:00–20:00</div>
-              </div>
-              <div class="a-row" style="margin-top:6px">
-                <div><div class="a-label" data-i18n="m.from">From</div><div class="a-input sel" data-i18n="m.today1000">Today, 10:00</div></div>
-                <div><div class="a-label" data-i18n="m.to">To</div><div class="a-input sel" data-i18n="m.today1400">Today, 14:00</div></div>
-              </div>
-              <div class="a-btn" data-i18n="m.confirm">Confirm booking</div>
-            </div>
+              <div class="x-submit"><svg class="i"><use href="#i-calendar"/></svg><span data-i18n="m.confirm">Confirm booking</span></div>
+              <div class="x-cancel" data-i18n="m.cancel">Cancel</div></div>
           </div>
         </div>
       </div>
@@ -1156,36 +1276,42 @@
       </div>
       <div class="feature-media reveal" aria-hidden="true">
         <div class="phone">
-          <div class="screen">
+          <div class="screen x-bg">
             <div class="island"></div>
             <div class="statusbar"><span>9:41</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i><span class="batt"></span></span></div>
-            <div class="navbar-title" data-i18n="m.tabBookings">My bookings &amp; parking</div>
-            <div class="app-body grey">
-              <div class="a-seg"><span class="on" data-i18n="m.bookedByMe">Booked by me</span><span data-i18n="m.mySpaces">My parking spaces</span></div>
-              <div class="a-sec" data-i18n="m.current">Current and upcoming</div>
-              <div class="a-offer">
-                <div class="top"><span class="t" data-i18n="m.spotA12">Level -1 · Spot A12</span><span class="a-badge green" data-i18n="m.inProgress">In progress</span></div>
-                <div class="time" data-i18n="m.today1014">Today 10:00–14:00</div>
-                <div class="who" data-i18n="m.ownedAnna">Owned by Anna</div>
-                <div class="a-btn" data-i18n="m.endEarly">End early</div>
-              </div>
-              <div class="a-offer">
-                <div class="top"><span class="t" data-i18n="m.spotB04">Level -2 · Spot B04</span><span class="a-badge" data-i18n="m.confirmed">Confirmed</span></div>
-                <div class="time" data-i18n="m.sat">Sat 09:00–18:00</div>
-                <div class="who" data-i18n="m.ownedPiotr">Owned by Piotr</div>
-              </div>
-              <div class="a-sec" style="margin-top:12px" data-i18n="m.history">History (last 30 days)</div>
-              <div class="a-offer">
-                <div class="top"><span class="t" data-i18n="m.spotC21">Level -1 · Spot C21</span><span class="a-badge grey" data-i18n="m.completed">Completed</span></div>
-                <div class="time" data-i18n="m.sep28">28 Sep 18:00 – 29 Sep 08:00</div>
-              </div>
+            
+            <div class="x-header">
+              
+              <span class="x-badge"><svg class="i"><use href="#i-calendar"/></svg></span>
+              <div class="x-htext"><div class="x-title" data-i18n="m.tabBookings">My bookings &amp; parking</div></div>
+              
             </div>
-            <div class="tabbar">
-              <span class="tab"><svg class="i"><use href="#i-home"/></svg><span data-i18n="m.tabHome">Home</span></span>
-              <span class="tab"><svg class="i"><use href="#i-parking"/></svg><span data-i18n="m.tabOffers">Parking Offers</span></span>
-              <span class="tab on"><svg class="i"><use href="#i-calendar"/></svg><span data-i18n="m.tabBookings">My bookings &amp; parking</span></span>
-              <span class="tab"><svg class="i"><use href="#i-send"/></svg><span data-i18n="m.tabRequests">Requests</span></span>
+            <div class="x-seg"><span class="on" data-i18n="m.bookedByMe">Booked by me</span><span data-i18n="m.mySpaces">My parking spaces</span></div>
+            <div class="x-desc" data-i18n="m.bookingsDesc">Spots you've booked from your neighbours. Here you'll find the spot number.</div>
+            <div class="x-list">
+              <div class="x-sec tight" data-i18n="m.current">Current and upcoming</div>
+              <div class="x-card"><span class="acc" style="background:#16a34a"></span><div class="x-cbody">
+                <div class="x-chead"><span class="x-when"><svg class="i"><use href="#i-clock"/></svg><span data-i18n="m.r1">Oct 18, 2026 10:00-14:00</span></span><span class="x-pill" style="color:#16a34a;border-color:#16a34a;background:#16a34a1A"><i style="background:#16a34a"></i><span data-i18n="m.inProgress">In progress</span></span></div>
+                <div class="x-row strong"><span class="ri"><svg class="i"><use href="#i-parking"/></svg></span><span data-i18n="m.spotA12">Level -1 · Spot A12</span></div>
+                <div class="x-row"><span class="ri"><svg class="i"><use href="#i-user"/></svg></span><span data-i18n="m.ownedAnna">Owned by Anna</span></div>
+                <div><span class="x-btn2"><svg class="i"><use href="#i-dots"/></svg><span data-i18n="m.details">Actions and details</span></span></div>
+              </div></div>
+              <div class="x-card"><span class="acc" style="background:#08274F"></span><div class="x-cbody">
+                <div class="x-chead"><span class="x-when"><svg class="i"><use href="#i-clock"/></svg><span data-i18n="m.r2">Oct 25, 2026 09:00-18:00</span></span><span class="x-pill" style="color:#08274F;border-color:#08274F;background:#08274F1A"><i style="background:#08274F"></i><span data-i18n="m.confirmed">Confirmed</span></span></div>
+                <div class="x-row strong"><span class="ri"><svg class="i"><use href="#i-parking"/></svg></span><span data-i18n="m.spotB04">Level -2 · Spot B04</span></div>
+                <div class="x-row"><span class="ri"><svg class="i"><use href="#i-user"/></svg></span><span data-i18n="m.ownedPiotr">Owned by Piotr</span></div>
+                <div><span class="x-btn2"><svg class="i"><use href="#i-dots"/></svg><span data-i18n="m.details">Actions and details</span></span></div>
+              </div></div>
+              <div class="x-sec tight" data-i18n="m.history">History (last 30 days)</div>
+              <div class="x-card muted"><span class="acc" style="background:#6b7280"></span><div class="x-cbody">
+                <div class="x-chead"><span class="x-when"><svg class="i"><use href="#i-clock"/></svg><span data-i18n="m.r3">Sep 28, 2026 18:00-22:00</span></span><span class="x-pill" style="color:#6b7280;border-color:#6b7280;background:#6b72801A"><i style="background:#6b7280"></i><span data-i18n="m.completed">Completed</span></span></div>
+                <div class="x-row strong"><span class="ri"><svg class="i"><use href="#i-parking"/></svg></span><span data-i18n="m.spotC21">Level -1 · Spot C21</span></div>
+                
+                <div><span class="x-btn2"><svg class="i"><use href="#i-dots"/></svg><span data-i18n="m.details">Actions and details</span></span></div>
+              </div></div>
             </div>
+            <div class="x-fab" data-i18n="m.postOfferFab">+ Post offer</div>
+            <div class="tabbar"><span class="tab"><svg class="i"><use href="#i-home"/></svg><span data-i18n="m.tabHome">Home</span></span><span class="tab"><svg class="i"><use href="#i-parking"/></svg><span data-i18n="m.tabOffers">Parking Offers</span></span><span class="tab on"><svg class="i"><use href="#i-calendar"/></svg><span data-i18n="m.tabBookings">My bookings &amp; parking</span></span><span class="tab"><svg class="i"><use href="#i-send"/></svg><span data-i18n="m.tabRequests">Requests</span></span></div>
           </div>
         </div>
       </div>
@@ -1211,7 +1337,12 @@
           <div class="screen">
             <div class="island"></div>
             <div class="statusbar"><span>9:41</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i><span class="batt"></span></span></div>
-            <div class="navbar-title" data-i18n="gm.navTitle">Garage map</div>
+            <div class="x-header">
+              <span class="x-back"><svg class="i"><use href="#i-chevron-left"/></svg></span>
+              <span class="x-badge"><svg class="i"><use href="#i-map"/></svg></span>
+              <div class="x-htext"><div class="x-title" data-i18n="gm.navTitle">Garage map</div></div>
+              
+            </div>
             <div class="gm-map">
               <svg class="gm-svg" viewBox="0 0 260 350" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Garage map"><rect width="260" height="350" fill="#EDF0F2"/><path d="M8 8 H252 V342 H132 V314 H8 Z" fill="#F8FAFA" stroke="#2C3838" stroke-width="2.6" stroke-linejoin="round"/><rect x="50.5" y="12.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="60.75" y="32" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">A01</text><rect x="73" y="12.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="83.25" y="32" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">A02</text><rect x="95.5" y="12.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="105.75" y="32" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">A03</text><rect x="118" y="12.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="128.25" y="32" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">A04</text><rect x="140.5" y="12.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="150.75" y="32" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">A05</text><rect x="163" y="12.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="173.25" y="32" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">A06</text><rect x="185.5" y="12.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="195.75" y="32" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">A07</text><rect x="208" y="12.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="218.25" y="32" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">A08</text><rect x="230.5" y="12.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="240.75" y="32" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">A09</text><rect x="12.5" y="66.5" width="35" height="19" rx="1.8" fill="#E9D8A6"/><text x="30" y="76" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">T1</text><rect x="12.5" y="87.5" width="35" height="19" rx="1.8" fill="#E9D8A6"/><text x="30" y="97" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">T2</text><rect x="12.5" y="108.5" width="35" height="19" rx="1.8" fill="#E9D8A6"/><text x="30" y="118" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">T3</text><rect x="12.5" y="129.5" width="35" height="19" rx="1.8" fill="#E9D8A6"/><text x="30" y="139" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">T4</text><rect x="12.5" y="150.5" width="35" height="19" rx="1.8" fill="#E9D8A6"/><text x="30" y="160" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">T5</text><rect x="12.5" y="171.5" width="35" height="19" rx="1.8" fill="#E9D8A6"/><text x="30" y="181" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">T6</text><rect x="74.5" y="114.5" width="20.5" height="39" rx="1.8" fill="#08274F"/><text x="84.75" y="134" font-size="6.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">A12</text><rect x="74.5" y="155.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="84.75" y="175" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">B01</text><rect x="97" y="114.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="107.25" y="134" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">A13</text><rect x="97" y="155.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="107.25" y="175" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">B02</text><rect x="119.5" y="114.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="129.75" y="134" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">A14</text><rect x="119.5" y="155.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="129.75" y="175" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">B03</text><rect x="142" y="114.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="152.25" y="134" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">A15</text><rect x="142" y="155.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="152.25" y="175" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">B04</text><rect x="164.5" y="114.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="174.75" y="134" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">A16</text><rect x="164.5" y="155.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="174.75" y="175" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">B05</text><rect x="187" y="114.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="197.25" y="134" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">A17</text><rect x="187" y="155.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="197.25" y="175" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">B06</text><rect x="74.5" y="240.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="84.75" y="260" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">B10</text><rect x="97" y="240.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="107.25" y="260" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">B11</text><rect x="119.5" y="240.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="129.75" y="260" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">B12</text><rect x="142" y="240.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="152.25" y="260" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">B13</text><rect x="164.5" y="240.5" width="20.5" height="39" rx="1.8" fill="#C9D8D6"/><text x="174.75" y="260" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">B14</text><rect x="188.5" y="240.5" width="27" height="39" rx="1.8" fill="#B9C5DF"/><text x="202" y="260" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">B15</text><rect x="188.5" y="282.5" width="27" height="39" rx="1.8" fill="#B9C5DF"/><text x="202" y="302" font-size="6.4" font-weight="600" fill="#2D4140" text-anchor="middle" dominant-baseline="central">B16</text><rect x="220" y="238" width="30" height="56" rx="2" fill="#E3E8EA" stroke="#9AA5A8" stroke-width="0.8"/><text x="235" y="262" font-size="5.6" font-weight="700" fill="#6B7877" text-anchor="middle">KLATKA</text><text x="235" y="270" font-size="5.6" font-weight="700" fill="#6B7877" text-anchor="middle">2</text><clipPath id="gm-ramp"><path d="M14 292 L58 272 L58 310 Z"/></clipPath><path d="M14 270 V312 M18 270 V312 M22 270 V312 M26 270 V312 M30 270 V312 M34 270 V312 M38 270 V312 M42 270 V312 M46 270 V312 M50 270 V312 M54 270 V312 M58 270 V312" stroke="#9AA5A8" stroke-width="0.9" clip-path="url(#gm-ramp)"/><path d="M14 292 L58 272 L58 310 Z" fill="none" stroke="#9AA5A8" stroke-width="0.9"/><g transform="translate(88 300)"><rect x="-19" y="-7" width="38" height="14" rx="7" fill="#2C3838"/><text x="0" y="0" font-size="6.6" font-weight="700" fill="#fff" text-anchor="middle" dominant-baseline="central" data-i18n="gm.entry">ENTRY</text></g><rect x="72.5" y="112.5" width="24.5" height="43" rx="2.5" fill="none" stroke="#08274F" stroke-width="1.4"/><g transform="translate(84.75 114)"><rect x="-15" y="-23" width="30" height="17" rx="4" fill="#08274F"/><path d="M-3.5 -6 H3.5 L0 -2.5 Z" fill="#08274F"/><text x="0" y="-14.5" font-size="8.4" font-weight="700" fill="#fff" text-anchor="middle" dominant-baseline="central">A12</text></g></svg>
               <div class="gm-controls">
