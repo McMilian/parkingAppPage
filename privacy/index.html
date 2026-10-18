@@ -28,9 +28,9 @@
     if (lang !== "en" && lang !== "pl") {
       try { lang = localStorage.getItem("lang"); } catch (e) {}
     }
-    if (lang !== "en" && lang !== "pl") {
-      lang = /^pl\b/i.test(navigator.language || "") ? "pl" : "en";
-    }
+    // Polish by default -- the community is Polish. English only when picked with the switch
+    // (remembered above) or asked for with ?lang=en.
+    if (lang !== "en" && lang !== "pl") lang = "pl";
     document.documentElement.lang = lang;
   })();
 </script>
